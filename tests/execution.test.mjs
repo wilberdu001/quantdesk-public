@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {Execution} from '../src/execution.js';
+const now=Date.UTC(2026,9,1,15);
+const quote=()=>({source:'synthetic test',bid:99.9,ask:100.1,bidSize:1000,askSize:1000,marketTime:now/1000,observedAt:now,delayed:false});
+test('flat market loses exactly spread, adverse slippage and commission',()=>{const q=quote(),b=Execution.plan(q,'buy',100,{},now),s=Execution.plan(q,'sell',100,{},now);assert.equal(b.price,100.13);assert.equal(s.price,99.88);assert.equal((s.price-b.price)*100-b.commission-s.commission,-27);});
+test('fees apply a per-order floor without a hidden percent commission',()=>{assert.equal(Execution.fee(1),1);assert.equal(Execution.fee(1000),5);});
+test('crossed, stale and explicitly delayed quotes cannot produce a plan',()=>{for(const change of [{bid:101},{marketTime:now/1000-121},{delayed:true},{marketTime:now/1000+61},{observedAt:now-90001}])assert.equal(Execution.plan({...quote(),...change},'buy',1,{},now).ok,false);});
+test('quote size is side-specific and consumed size is not reusable',()=>{assert.equal(Execution.plan({...quote(),askSize:5},'buy',2,{time:now/1000,buy:4},now).ok,false);assert.equal(Execution.plan({...quote(),askSize:5},'sell',2,{time:now/1000,buy:4},now).ok,true);});
+test('unknown, zero and nonfinite values cannot invent liquidity',()=>{for(const change of [{askSize:null},{bid:NaN},{ask:Infinity},{bidSize:0}])assert.equal(Execution.plan({...quote(),...change},change.bidSize===0?'sell':'buy',1,{},now).ok,false);});
+test('cost decomposition reconciles across a range of order sizes',()=>{for(const n of [1,10,100,1000]){const b=Execution.plan(quote(),'buy',n,{},now),s=Execution.plan(quote(),'sell',n,{},now),net=(s.price-b.price)*n-b.commission-s.commission;assert.ok(Math.abs(net+b.spreadCost+s.spreadCost+b.slippageCost+s.slippageCost+b.commission+s.commission)<1e-7);}});

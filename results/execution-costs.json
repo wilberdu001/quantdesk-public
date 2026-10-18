@@ -1,0 +1,109 @@
+{
+  "data": "synthetic controlled scenarios; not live performance",
+  "assumptions": {
+    "perShare": 0.005,
+    "minFee": 1,
+    "slippageBps": 2
+  },
+  "results": [
+    {
+      "shares": 10,
+      "spread": 0.02,
+      "midpointPnl": 0,
+      "buyPrice": 100.04,
+      "sellPrice": 99.97,
+      "spreadCost": 0.2,
+      "slippageCost": 0.5,
+      "commission": 2,
+      "netPnl": -2.7
+    },
+    {
+      "shares": 10,
+      "spread": 0.2,
+      "midpointPnl": 0,
+      "buyPrice": 100.13,
+      "sellPrice": 99.88,
+      "spreadCost": 2,
+      "slippageCost": 0.5,
+      "commission": 2,
+      "netPnl": -4.5
+    },
+    {
+      "shares": 10,
+      "spread": 1,
+      "midpointPnl": 0,
+      "buyPrice": 100.53,
+      "sellPrice": 99.48,
+      "spreadCost": 10,
+      "slippageCost": 0.5,
+      "commission": 2,
+      "netPnl": -12.5
+    },
+    {
+      "shares": 100,
+      "spread": 0.02,
+      "midpointPnl": 0,
+      "buyPrice": 100.04,
+      "sellPrice": 99.97,
+      "spreadCost": 2,
+      "slippageCost": 5,
+      "commission": 2,
+      "netPnl": -9
+    },
+    {
+      "shares": 100,
+      "spread": 0.2,
+      "midpointPnl": 0,
+      "buyPrice": 100.13,
+      "sellPrice": 99.88,
+      "spreadCost": 20,
+      "slippageCost": 5,
+      "commission": 2,
+      "netPnl": -27
+    },
+    {
+      "shares": 100,
+      "spread": 1,
+      "midpointPnl": 0,
+      "buyPrice": 100.53,
+      "sellPrice": 99.48,
+      "spreadCost": 100,
+      "slippageCost": 5,
+      "commission": 2,
+      "netPnl": -107
+    },
+    {
+      "shares": 1000,
+      "spread": 0.02,
+      "midpointPnl": 0,
+      "buyPrice": 100.04,
+      "sellPrice": 99.97,
+      "spreadCost": 20,
+      "slippageCost": 50,
+      "commission": 10,
+      "netPnl": -80
+    },
+    {
+      "shares": 1000,
+      "spread": 0.2,
+      "midpointPnl": 0,
+      "buyPrice": 100.13,
+      "sellPrice": 99.88,
+      "spreadCost": 200,
+      "slippageCost": 50,
+      "commission": 10,
+      "netPnl": -260
+    },
+    {
+      "shares": 1000,
+      "spread": 1,
+      "midpointPnl": 0,
+      "buyPrice": 100.53,
+      "sellPrice": 99.48,
+      "spreadCost": 1000,
+      "slippageCost": 50,
+      "commission": 10,
+      "netPnl": -1060
+    }
+  ]
+}
