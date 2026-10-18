@@ -18,6 +18,8 @@ npm start
 
 Open **http://localhost:4174**. The interactive cost laboratory uses **synthetic reference quotes**, visibly labeled throughout. It does not fetch live data or send orders. The same demonstration can be hosted as static files from the repository root.
 
+![Execution cost laboratory](assets/preview.png)
+
 ## Selected technical work
 
 - A deterministic execution planner that starts buys at ask and sells at bid, applies adverse slippage, rounds conservatively, and reports commission separately.
