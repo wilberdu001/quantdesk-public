@@ -22,6 +22,8 @@ Open **http://localhost:4174**. The interactive cost laboratory uses **synthetic
 
 ## Selected technical work
 
+The [market-data trust contract](docs/data-trust.md) explains provenance, timestamp, price-type, session and coverage checks used to prevent misleading research claims.
+
 - A deterministic execution planner that starts buys at ask and sells at bid, applies adverse slippage, rounds conservatively, and reports commission separately.
 - Validation of stale, delayed, crossed and invalid quotes, plus conservative available-quantity checks with explicit consumption input.
 - Tests for symmetric costs, side-specific liquidity, invalid data and repeatable experiments.
