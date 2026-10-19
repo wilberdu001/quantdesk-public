@@ -59,3 +59,5 @@ Order semantics reference: [SEC Investor.gov — Types of Orders](https://www.in
 Selected portable research: [temporal validation](docs/temporal-validation.md), with causal parameter selection and nonoverlapping walk-forward folds.
 
 See [isolated strategy books](docs/strategy-books.md) for accounting and concurrency boundaries.
+
+[Persisted paper robot runtime](docs/server-runtime.md) describes restart, scheduling, risk and concurrent pause behavior.
