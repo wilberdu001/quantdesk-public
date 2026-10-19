@@ -65,3 +65,5 @@ See [isolated strategy books](docs/strategy-books.md) for accounting and concurr
 The [guided learning contract](docs/guided-learning.md) distinguishes tool evidence from synthetic exercises and self-checks. Version 1.1 adds temporal-validation examples, strategy-book and server-runtime architecture, and an English-only learning exercise.
 
 Version 1.2 improves the responsive learning exercise and documents the [research interface design](docs/interface-design.md).
+
+Version 1.2.1 documents [open-session server verification](docs/open-session-verification.md), including a post-fill equity-mark defect and a fully synthetic accounting regression.
