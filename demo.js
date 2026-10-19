@@ -11,3 +11,8 @@ function render(){
  el('fills').textContent=`Illustrative fills: buy ${qty} at ${money(buy.price)}, sell ${qty} at ${money(sell.price)}. No market movement or strategy alpha assumed.`;
 }
 el('shares').addEventListener('input',render);el('spread').addEventListener('input',render);render();
+el('check-answer').addEventListener('click',()=>{
+ el('answer-feedback').textContent=el('cost-answer').value==='-27'
+  ?'Correct: buy at $100.13, sell at $99.88, then subtract $2 commission. Net P&L is -$27. The reference scenario is synthetic.'
+  :'Cross the spread on both legs, apply adverse slippage and cent rounding, then subtract both commissions. Try again.';
+});

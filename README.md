@@ -61,3 +61,5 @@ Selected portable research: [temporal validation](docs/temporal-validation.md), 
 See [isolated strategy books](docs/strategy-books.md) for accounting and concurrency boundaries.
 
 [Persisted paper robot runtime](docs/server-runtime.md) describes restart, scheduling, risk and concurrent pause behavior.
+
+The [guided learning contract](docs/guided-learning.md) distinguishes tool evidence from synthetic exercises and self-checks. Version 1.1 adds temporal-validation examples, strategy-book and server-runtime architecture, and an English-only learning exercise.
