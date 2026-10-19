@@ -55,3 +55,5 @@ The private platform separately tests accounting conservation, partial exits, re
 Fees and slippage here are stated model assumptions, not a broker tariff. Visible quote quantity is a conservative bound, not a guarantee of liquidity. The public planner expects the caller to persist consumption; the demo does not operate a persistent account. There is no order queue, depth sweep, partial-fill simulator, borrowing model, taxes or strategy alpha in this showcase. A real market-data integration requires suitable timestamps, data permissions and a separately validated execution service.
 
 Order semantics reference: [SEC Investor.gov — Types of Orders](https://www.investor.gov/introduction-investing/investing-basics/how-stock-markets-work/types-orders).
+
+Selected portable research: [temporal validation](docs/temporal-validation.md), with causal parameter selection and nonoverlapping walk-forward folds.
