@@ -67,3 +67,5 @@ The [guided learning contract](docs/guided-learning.md) distinguishes tool evide
 Version 1.2 improves the responsive learning exercise and documents the [research interface design](docs/interface-design.md).
 
 Version 1.2.1 documents [open-session server verification](docs/open-session-verification.md), including a post-fill equity-mark defect and a fully synthetic accounting regression.
+
+Version 1.2.2 explains [account state consistency](docs/state-consistency.md), with synthetic regressions for stale inventory and lost save acknowledgements.
