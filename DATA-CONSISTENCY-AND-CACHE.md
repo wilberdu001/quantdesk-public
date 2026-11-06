@@ -9,3 +9,9 @@ Two bounded engineering changes reduce redundant work without deleting account h
 Controlled private regression scenarios verify both intervals refresh, one interval can fail without discarding the other, 70 distinct historical requests retain 64 cache entries, and two simultaneous identical misses execute upstream work once. Distinct owner keys and retry-after-failure are checked independently. These are reproducible correctness/resource-contract results, not measured production latency, CPU or memory savings.
 
 The public demo remains synthetic and contains no private market-data access, licensed snapshots, account identifiers, unpublished strategies or deployment credentials. This document is independently curated; the private implementation and its history are not copied into this repository.
+
+## Bounded public-endpoint retention
+
+A separate browser cache for public endpoint results and errors is now capped at 96 entries. Access removes expired entries; a hit promotes retention priority without modifying its collection time. Successful results retain caller-defined freshness limits, and errors keep the existing 30-second cooldown. Pending identical requests still share work.
+
+Controlled regression scenarios cover mixed success/error capacity, hot-entry retention, oldest-entry eviction, unchanged collection timestamps, retry after cooldown, concurrent request sharing and expired-entry removal. These generic methodology results do not disclose authenticated production metadata or claim measured production heap/CPU savings. User-authored notes and trading history are not a request cache and must not be deleted as a cache optimization.
