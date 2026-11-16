@@ -1,3 +1,7 @@
+# Release 1.3.0
+
+Adds an independently curated, English-only case study and pure synthetic ownership model for durable teaching simulations. Tests cover overlapping revisions, duplicate minutes, browser write fencing, process restart and handback. The static cost laboratory continues unchanged. Production cron and real-market evidence are explicitly separate from local runtime verification. No private strategy, account state, credentials, infrastructure identity or private Git history is included.
+
 # Release 1.2.2
 
 Adds an English account-consistency case study and a standalone synthetic decision model for inventory reconciliation and lost save acknowledgements. Tests preserve historical input records and reject ambiguous closing actions. No private account snapshots, strategy definitions, deployment identities or historical Git data are included.

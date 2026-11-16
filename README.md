@@ -20,6 +20,8 @@ Open **http://localhost:4174**. The interactive cost laboratory uses **synthetic
 
 ![Execution cost laboratory](assets/preview.png)
 
+The [durable teaching simulation case study](docs/durable-teaching.md) and dependency-free ownership model explain browser write fences, scheduler deduplication, restart recovery and historical-record preservation.
+
 ## Selected technical work
 
 The [market-data trust contract](docs/data-trust.md) explains provenance, timestamp, price-type, session and coverage checks used to prevent misleading research claims.
