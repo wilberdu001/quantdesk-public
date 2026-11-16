@@ -1,3 +1,7 @@
+# Handoff verification update — 2026-11-16
+
+Documents additional account-switch, uncertain-acknowledgement and unsaved-book recovery boundaries found before production rollout. Only the English engineering case study changes; the standalone public laboratory and pure ownership example remain unchanged.
+
 # Release 1.3.0
 
 Adds an independently curated, English-only case study and pure synthetic ownership model for durable teaching simulations. Tests cover overlapping revisions, duplicate minutes, browser write fencing, process restart and handback. The static cost laboratory continues unchanged. Production cron and real-market evidence are explicitly separate from local runtime verification. No private strategy, account state, credentials, infrastructure identity or private Git history is included.

@@ -35,3 +35,10 @@ Local verification used the actual Worker runtime and an isolated persistent dat
 Local scheduler invocations are not evidence of a production cron or real-market execution. Production deployment and cross-deployment observation require separate evidence. The standalone public example models the revision and ownership contract; it is not an account service or robot implementation.
 
 See [the pure ownership example](../src/scheduled-owner.js) and [its tests](../tests/scheduled-owner.test.mjs). Run `npm test` without dependencies or credentials.
+
+
+## Handoff races found before production rollout
+
+Additional synthetic regression work found two browser handoff defects before this candidate was deployed: an adoption request could continue after an account switch, and a committed server snapshot could discard an unsaved local book without preserving a recovery copy. The private candidate now checks the account generation after each asynchronous boundary. It freezes local teaching computation and mutations during adoption, preserving deliberately running robot statuses. An uncertain acknowledgement retains the original command and keeps the browser fenced until server ownership is confirmed.
+
+Unsaved conflicting records are preserved in account-scoped recovery storage before replacing the display cache. A late response from the legacy save endpoint cannot restore an old book over the authoritative snapshot. Six additional regressions cover these boundaries; the private suite has 140 passing checks. These are synthetic regression results, not production cron or live-market evidence.
