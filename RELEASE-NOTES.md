@@ -1,3 +1,7 @@
+# Release 1.3.1
+
+Adds independently reviewed production teaching-simulation verification, cross-deployment continuity and a concrete fractional-cost rounding counterexample. The account-free public laboratory is unchanged. No private account data, strategies, production identities, credentials or private Git history are included.
+
 # Handoff verification update — 2026-11-16
 
 Documents additional account-switch, uncertain-acknowledgement and unsaved-book recovery boundaries found before production rollout. Only the English engineering case study changes; the standalone public laboratory and pure ownership example remain unchanged.
