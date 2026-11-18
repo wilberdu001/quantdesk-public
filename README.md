@@ -71,3 +71,5 @@ Version 1.2 improves the responsive learning exercise and documents the [researc
 Version 1.2.1 documents [open-session server verification](docs/open-session-verification.md), including a post-fill equity-mark defect and a fully synthetic accounting regression.
 
 Version 1.2.2 explains [account state consistency](docs/state-consistency.md), with synthetic regressions for stale inventory and lost save acknowledgements.
+
+Version 1.3.2 adds [runtime observability](docs/runtime-observability.md): distinguish scheduler liveness, individual strategy progress, unknown pause causes, clock skew, and disconnected snapshots without additional polling or state storage.
